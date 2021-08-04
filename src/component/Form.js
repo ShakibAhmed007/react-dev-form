@@ -3,7 +3,7 @@ export default class Form extends React.Component {
   state = {
     userName: 'Shakib',
     description: 'Hello',
-    userType: ''
+    userType: 'User'
   };
 
   handleUserName = e => {
