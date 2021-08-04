@@ -70,9 +70,9 @@ export default class Form extends React.Component {
             checked={this.state.isActive}
             onChange={this.handleIsActive}
           />
-                    <br />
           <br />
-          <input type="submit" value="Submit"/>
+          <br />
+          <input type="submit" value="Submit" />
         </form>
       </div>
     );
