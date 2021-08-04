@@ -3,7 +3,8 @@ export default class Form extends React.Component {
   state = {
     userName: 'Shakib',
     description: 'Hello',
-    userType: 'User'
+    userType: 'User',
+    isActive: true
   };
 
   handleUserName = e => {
@@ -21,6 +22,12 @@ export default class Form extends React.Component {
   handleUserType = e => {
     this.setState({
       userType: e.target.value
+    });
+  };
+
+  handleIsActive = e => {
+    this.setState({
+      isActive: e.target.checked
     });
   };
 
@@ -49,6 +56,14 @@ export default class Form extends React.Component {
             <option value="Admin">Admin</option>
             <option value="User">User</option>
           </select>
+          <br />
+          <br />
+          <label>Type: </label>
+          <input
+            type="checkbox"
+            checked={this.state.isActive}
+            onChange={this.handleIsActive}
+          />
         </form>
       </div>
     );
