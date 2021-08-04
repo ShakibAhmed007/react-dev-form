@@ -1,13 +1,19 @@
 import React from 'react';
 export default class Form extends React.Component {
   state = {
-    userName: 'Shakib'
+    userName: 'Shakib',
+    description: 'Hello'
   };
 
   handleUserName = e => {
-    console.log(e.target.value);
     this.setState({
       userName: e.target.value
+    });
+  };
+
+  handleDescription = e => {
+    this.setState({
+      description: e.target.value
     });
   };
 
@@ -21,6 +27,13 @@ export default class Form extends React.Component {
             placeholder="Please enter your name"
             value={this.state.userName}
             onChange={this.handleUserName}
+          />
+          <br />
+          <br />
+          <label>Description: </label>
+          <textarea
+            value={this.state.description}
+            onChange={this.handleDescription}
           />
         </form>
       </div>
