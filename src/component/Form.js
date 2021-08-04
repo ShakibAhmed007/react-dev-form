@@ -2,7 +2,8 @@ import React from 'react';
 export default class Form extends React.Component {
   state = {
     userName: 'Shakib',
-    description: 'Hello'
+    description: 'Hello',
+    userType: ''
   };
 
   handleUserName = e => {
@@ -14,6 +15,12 @@ export default class Form extends React.Component {
   handleDescription = e => {
     this.setState({
       description: e.target.value
+    });
+  };
+
+  handleUserType = e => {
+    this.setState({
+      userType: e.target.value
     });
   };
 
@@ -35,6 +42,13 @@ export default class Form extends React.Component {
             value={this.state.description}
             onChange={this.handleDescription}
           />
+          <br />
+          <br />
+          <label>User Type: </label>
+          <select value={this.state.userType} onChange={this.handleUserType}>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+          </select>
         </form>
       </div>
     );
