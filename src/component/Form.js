@@ -40,7 +40,7 @@ export default class Form extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>User Name: </label>
           <input
             type="text"
@@ -70,6 +70,9 @@ export default class Form extends React.Component {
             checked={this.state.isActive}
             onChange={this.handleIsActive}
           />
+                    <br />
+          <br />
+          <input type="submit" value="Submit"/>
         </form>
       </div>
     );
