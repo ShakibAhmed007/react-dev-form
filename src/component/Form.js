@@ -31,6 +31,12 @@ export default class Form extends React.Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    const { userName, description, userType, isActive } = this.state;
+    console.log(userName, description, userType, isActive);
+  };
+
   render() {
     return (
       <div>
